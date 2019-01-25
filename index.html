@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Science Olympiad</title>
-    <link rel="stylesheet" href="static/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <!--nav bar-->
 
-<div id="app">
-    <h1 v-if="yscore < bscore" class="topright">Yankton Win</h1>
-    <h1 v-if="yscore > bscore" class="topright">Brookings Win</h1>
-    <h1 v-if="yscore === bscore" class="topright">Brookings-Yankton tie</h1>
-    <h1 class="bottomright">{{Math.max(yscore, bscore)}} - {{Math.min(yscore, bscore)}}</h1>
-    <div v-for="event, key in events" v-bind:class="[{flex: true},{win: (event.brookingsScore < event.yanktonScore)}, { lose: (event.brookingsScore > event.yanktonScore)}, {nottry: (event.brookingsScore == 5)}]">
-        <input type="text" readonly v-bind:value="event.yanktonScore"><input v-bind:id="key" v-model="events[key].brookingsScore" type="text" v-bind:placeholder="event.brookingsScore">{{event.event}} - {{event.person}}
-    </div>
-
+<div class="container center" id="menu">
+    <h1>Only <span id="countdown"></span> until State Science Olympiad!</h1>
+    <button class="btn-large waves-effect waves-light" onclick="location.href = 'scores.html'">Show ScoreTracker <i
+            class="material-icons right">score</i></button>
+    <!--<button class="btn-large waves-effect waves-light purple" onclick="location.href = 'events.html'">Events <i class="material-icons right">event_note</i></button>-->
+    <button class="btn-large waves-effect waves-light red"
+            onclick="location.href = 'https://api-static.ctlglobalsolutions.com/science/SO_C_2019.pdf'">Rules Manual <i
+            class="material-icons right">gavel</i></button>
+    <!--<button class="btn-large waves-effect waves-light green" onclick="location.href = 'events.html'">Timings <i class="material-icons right">av_timer</i></button>-->
+</div>
+<div id="app" style="display: none;">
 </div>
 
 <!--hero image-->

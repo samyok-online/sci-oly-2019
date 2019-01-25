@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score Tracker!</title>
+    <link href="static/css/main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app" v-bind:class="[{win: yscore > bscore}, {nottry: yscore < bscore}, {lose: yscore === bscore}]">
+    <h1 class="topright" v-if="yscore < bscore">Yankton Win</h1>
+    <h1 class="topright" v-if="yscore > bscore">Brookings Win</h1>
+    <h1 class="topright" v-if="yscore === bscore">Brookings-Yankton tie</h1>
+    <h1 class="bottomright">{{Math.max(yscore, bscore)}} - {{Math.min(yscore, bscore)}}</h1>
+    <h3>Only edit OUR ranking (the second box) -- the Yankton Ranking will automatically update.</h3>
+    <div v-bind:class="[{flex: true},{win: (event.brookingsScore < event.yanktonScore)}, { lose: (event.brookingsScore > event.yanktonScore)}, {nottry: (event.brookingsScore == 5)}]"
+         v-for="event, key in events">
+        <label>
+            <input readonly type="text" v-bind:value="event.yanktonScore">
+        </label>
+        <label>
+            <input type="text"
+                   v-bind:id="key"
+                   v-bind:placeholder="event.brookingsScore"
+                   v-model="events[key].brookingsScore">
+        </label>
+        {{event.event}} - {{event.person}}
+    </div>
+
+</div>
+
+<!--hero image-->
+
+<script src="static/js/main.js"></script>
+</body>
+</html>

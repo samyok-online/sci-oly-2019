@@ -1,5 +1,6 @@
 /*global $ Vue*/
 $(document).ready(()=>{
+    if (document.getElementById("countdown")) startTimer();
     let App = new Vue({
         el: "#app",
         data: {
@@ -8,7 +9,7 @@ $(document).ready(()=>{
             yscore:0
         }
     });
-    let string = "Anatomy and Physiology  | Helen Zhang and Angela LansangXAstronomy | Bindi Kasu and Serena An/Tristina TingXCircuit Lab  | Grant Sternhagen *Can have one more personXCodebusters | Prasoon Khare, Samyok Nepal, and Carissa WittXDesigner Genes | Samyok Nepal and Carissa WittXDisease Detectives  | Marina and Jane AdryXDynamic Planet  | Helen Zhang and Angela LansangXExperimental Design  | Will Hummel, Aditya Tummala, and Prasoon KhareXFermi Questions  | Samyoke and Serena An/TrisitnaXFossils  | Will Hummel and Aditya TummalaXHerpetology  | Helen Zhang and Angela LansangXProtein Modeling  | Marina Du and Jane Adry *Can have one more personXThermodynamics  | Grant Sternhagen *Can have two more peopleXWrite It Do It  | Bidhi Kasu and Serna An/Tristina TingXBoomilever (2) |XChemistry Lab (2) |XForensics (2) |XGeological Mapping (2) |XMission Possible (2) |XMousetrap (2) |XSounds of Music (2) |XWater Quality (2) |XWright Stuff (2) |X";
+    let string = "Anatomy and Physiology  | Helen Zhang and Angela LansangXAstronomy | Bindi Kasu and Serena An/Tristina TingXCircuit Lab  | Grant Sternhagen *Can have one more personXCodebusters | Prasoon Khare, Samyok Nepal, and Carissa WittXDesigner Genes | Samyok Nepal and Carissa WittXDisease Detectives  | Marina and Jane AdryXDynamic Planet  | Helen Zhang and Angela LansangXExperimental Design  | Will Hummel, Aditya Tummala, and Prasoon KhareXFermi Questions  | Samyoke and Serena An/TrisitnaXFossils  | Will Hummel and Aditya TummalaXHerpetology  | Helen Zhang and Angela LansangXProtein Modeling  | Marina Du, Jane Adry, and Joseph ParkXThermodynamics  | Grant Sternhagen *Can have two more peopleXWrite It Do It  | Bidhi Kasu and Serena An/Tristina TingXBoomilever (2) | Orange Team (Will, Aditya, Joshua, David, Joseph)XChemistry Lab | Marina Du and Jane AdryXForensics |David and Joseph ParkXGeological Mapping |Prasoon and JoshuaXMission Possible (2) |Everyone, if timeXMousetrap |Blue team (Grant, Samyok, Prasoon, Marina, Jane)XSounds of Music |David and Joseph ParkXWater Quality |Joshua ParkXWright Stuff | Green Team (Helen, Angela, Bidhi, Tristina, Carissa)X";
     console.log(string.split("X"));
     let newStrings = [];
     string.split("X").forEach(item =>{
@@ -19,7 +20,7 @@ $(document).ready(()=>{
             newStrings.push({
                 event: split[0],
                 person: split[1],
-                brookingsScore: 1,
+                brookingsScore: Math.floor(Math.random() * 3 + 1),
                 yanktonScore: 2
             })
         } else {
@@ -52,3 +53,21 @@ $(document).ready(()=>{
     }
 
 });
+
+function startTimer() {
+    var countDownDate = new Date("Mar 23, 2019 9:00:00").getTime();
+
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerHTML = Math.floor(days / 7) + " weeks";
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Sci Oly 2019 has started!";
+        }
+    }, 1000);
+}
