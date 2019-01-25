@@ -18,7 +18,7 @@
     <div v-bind:class="[{flex: true},{win: (event.brookingsScore < event.yanktonScore)}, { lose: (event.brookingsScore > event.yanktonScore)}, {nottry: (event.brookingsScore == 5)}]"
          v-for="event, key in events">
         <label>
-            <input readonly type="text" v-bind:value="event.yanktonScore">
+            <input disabled readonly type="text" v-bind:value="event.yanktonScore">
         </label>
         <label>
             <input type="text"
