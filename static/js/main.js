@@ -1,5 +1,11 @@
 /*global $ Vue*/
 $(document).ready(()=>{
+    $(".scrollTop").click(() =>{
+        $([document.documentElement, document.body]).animate({
+            scrollTop: 0
+        }, 1000);
+
+    });
     if (document.getElementById("countdown")) startTimer();
     let App = new Vue({
         el: "#app",
@@ -20,7 +26,7 @@ $(document).ready(()=>{
             newStrings.push({
                 event: split[0],
                 person: split[1],
-                brookingsScore: Math.floor(Math.random() * 3 + 1),
+                brookingsScore: 1,
                 yanktonScore: 2
             })
         } else {
@@ -71,3 +77,5 @@ function startTimer() {
         }
     }, 1000);
 }
+
+function scrollTop(){}
