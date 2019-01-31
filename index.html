@@ -12,243 +12,105 @@
 </head>
 <body>
 <!--nav bar-->
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper nav-">
+            <a href="/" class="right brand-logo">Only <span id="countdown">some time</span> left!</a>
+            <ul class="left hide-on-med-and-down">
+                <li>
+                    <a href="scores.html">ScoreTracker
+                        <i class="material-icons right">score</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docs.google.com/spreadsheets/d/112X9Mj8x-YRNsTikTXI7lveLCZc9N8n1efaurbxns88/edit#gid=338614591">
+                        Events <i class="material-icons right">event_note</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://api-static.ctlglobalsolutions.com/science/SO_C_2019.pdf">
+                        Rules Manual
+                        <i class="material-icons right">gavel</i></a>
+                </li>
+                <li>
+
+                    <a href="/static/2019sdsciolydivc.pdf">Timings <i class="material-icons right">av_timer</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
 <div class="container center" id="menu">
-    <h1>Only <span id="countdown"></span> until State Science Olympiad!</h1>
-    <button class="btn-large waves-effect waves-light" onclick="location.href = 'scores.html'">ScoreTracker <i
-            class="material-icons right">score</i></button>
-    <button class="btn-large waves-effect waves-light purple" onclick="location.href = 'https://docs.google.com/spreadsheets/d/112X9Mj8x-YRNsTikTXI7lveLCZc9N8n1efaurbxns88/edit#gid=338614591'">Events <i class="material-icons right">event_note</i></button>
-    <button class="btn-large waves-effect waves-light red"
-            onclick="location.href = 'https://api-static.ctlglobalsolutions.com/science/SO_C_2019.pdf'">Rules Manual <i
-            class="material-icons right">gavel</i></button>
-    <button class="btn-large waves-effect waves-light green" onclick="location.href = '/static/2019sdsciolydivc.pdf'">Timings <i class="material-icons right">av_timer</i></button>
-    <h3></h3>
+    <h2>Brookings Science Olympiad</h2>
+    <div class="input-field">
+        <i class="material-icons prefix">search</i>
+        <input id="searchBar" type="text" class="validate">
+        <label for="searchBar">Event Search</label>
+    </div>
     <div class="row">
-        <div class="col s12" id="app" style="display: flex">
-            <table class="centered card z-depth-5">
-                <tr>
-                    <th><h3 style="text-align: center"><i class="material-icons small">arrow_forward</i>SciOly Wiki<i
-                            class="material-icons small">arrow_back</i></h3></th>
-                </tr>
-                <tbody>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Division_C">Division C</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Anatomy_and_Physiology">Anatomy and Physiology</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Astronomy">Astronomy</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Boomilever">Boomilever</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Chemistry_Lab">Chemistry Lab</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Circuit_Lab">Circuit Lab</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Code_Busters">Code Busters</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Designer_Genes">Designer Genes</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Disease_Detectives">Disease Detectives</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Dynamic_Planet/Glaciers">Dynamic Planet</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Experimental_Design">Experimental Design</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Fermi_Questions">Fermi Questions</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Fossils">Fossils</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Forensics">Forensics</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Geologic_Mapping">Geologic Mapping</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Herpetology">Herpetology</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Mission_Possible_C">Mission Possible</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Mousetrap_Vehicle">Mousetrap Vehicle</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Protein_Modeling">Protein Modeling</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Sounds_of_Music">Sounds of Music</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Thermodynamics">Thermodynamics</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Water_Quality">Water Quality</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Wright_Stuff">Wright Stuff</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://scioly.org/wiki/index.php/Write_It_Do_It">Write It Do It</a></td>
-                </tr>
-                </tbody>
-            </table>
+        <div class="col s2"></div>
+        <div class="col s8" id="app" style="display: flex">
             <table class="centered">
-                <tr>
-                    <th><h3 style="text-align: center">Official Pages</h3></th>
-                </tr>
                 <tbody>
-                <tr>
+                <tr v-for="event in events">
                     <td>
-                        <a href="https://www.soinc.org/anatomy-and-physiology-c">Anatomy and Physiology</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/designer-genes-c">Designer Genes</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/disease-detectives-c">Disease Detectives</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/herpetology-c-0">Herpetology</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/water-quality-c">Water Quality</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>EARTH AND SPACE SCIENCE</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/astronomy-c">Astronomy</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/dynamic-planet-c">Dynamic Planet</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/fossils-c">Fossils</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/geologic-mapping-c">GeoLogic Mapping</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>PHYSICAL SCIENCE &amp; CHEMISTRY</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/chemistry-lab-c">Chemistry Lab</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/circuit-lab-c">Circuit Lab</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/forensics-c">Forensics</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/protein-modeling-c">Protein Modeling</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/sounds-music-c">Sounds of Music</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/thermodynamics-c">Thermodynamics</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>TECHNOLOGY &amp; ENGINEERING</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/boomilever-c">Boomilever</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/mission-possible-c">Mission Possible</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/mousetrap-vehicle-c">Mousetrap Vehicle</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/wright-stuff-c">Wright Stuff</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>INQUIRY &amp; NATURE OF SCIENCE</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/codebusters-c">Codebusters</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/experimental-design-c">Experimental Design</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/fermi-questions-c">Fermi Questions</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.soinc.org/write-it-do-it-c">Write It Do It</a>
+                        <div class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+                                <span class="card-title">
+                                    {{event.title}}
+                                </span>
+                                <p>
+                                    {{event.details}}
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a v-bind:href="event.wiki"
+                                   class="btn waves-effect waves-light blue-grey darken-4">Wiki</a>
+                                <a v-bind:href="event.sciOly" class="btn waves-effect waves-light blue-grey darken-2">SciOly</a>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
 
-
     </div>
 
 </div>
-
-<!--hero image-->
-
+<div style="height: 10vh"></div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Brookings Science Olympiad</h5>
+                <p class="grey-text text-lighten-4">Created for use by the 2019 Brookings High School Science Olympiad team. Go Cats!</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="http://brookings.k12.sd.us/bhs">Brookings High
+                        School</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://sites.usd.edu/sdscienceolympiad/">SD Science
+                        Olympiad Website</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://soinc.org/">Science Olympiad Website</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://scioly.org">Science Olympiad Wiki</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2019 Samyok Nepal
+            <a class="btn-flat grey-text text-lighten-4 right scrollTop">Back to top</a>
+        </div>
+    </div>
+</footer>
+<script src="static/js/events.js"></script>
 <script src="static/js/main.js"></script>
+<script src="static/js/search.js"></script>
+
 </body>
 </html>
