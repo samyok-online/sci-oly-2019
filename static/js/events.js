@@ -141,7 +141,25 @@ const ALL_EVENTS = [{
 $(document).ready(() => {
     let app = new Vue({
         el: "#search",
-        data: {events: ALL_EVENTS}
+        data: {events: ALL_EVENTS},
+        methods: {
+            searchByNameOnChip: function (element) {
+                if ($(element.target).text().trim() === $("#searchBar").val()) {
+                    $("#searchBar").val('').click().focus().keyup().blur();
+                } else {
+                    $("#searchBar").val($(element.target).text().trim()).focus().keyup().blur();
+                }
+            },
+            searchByEventNameOnCard: function (element) {
+                if ($(element.target).hasClass("card-title")) {
+                    if ($(element.target).text().trim().toLowerCase() === $("#searchBar").val()) {
+                        $("#searchBar").val('').click().focus().keyup().blur();
+                    } else {
+                        $("#searchBar").val($(element.target).text().trim().toLowerCase()).focus().keyup().blur();
+                    }
+                }
+            }
+        }
     });
 });
 let page_numbers = [
