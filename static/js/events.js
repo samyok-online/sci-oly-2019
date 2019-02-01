@@ -33,7 +33,7 @@ const ALL_EVENTS = [{
     "title": "CODEBUSTERS",
     "sciOly": "https://www.soinc.org/codebusters-c",
     "details": "Teams will cryptanalze (decode) encrypted messages using cryptanalysis techniques and show\n                            skill with advanced ciphers by encrypting or decrypting a message.",
-    "people": ["Carissa Witt", "Tristina Ting?", "Prasoon Kharel"]
+    "people": ["Carissa Witt", "Tristina Ting", "Prasoon Kharel"]
 }, {
     "wiki": "https://scioly.org/wiki/index.php/Designer_Genes",
     "sciOly": "https://www.soinc.org/designer-genes-c",
@@ -75,7 +75,7 @@ const ALL_EVENTS = [{
     "sciOly": "https://www.soinc.org/forensics-c",
     "title": "FORENSICS",
     "details": "Given a scenario and some possible suspects, participants will perform a series of tests\n                            which along with other evidence or test results will be used to solve a crime.",
-    "people": ["???!!!"]
+    "people": ["Serena An", "Carissa Witt"]
 }, {
     "wiki": "https://scioly.org/wiki/index.php/Geologic_Mapping",
     "title": "GEOLOGIC MAPPING",
@@ -93,7 +93,7 @@ const ALL_EVENTS = [{
     "sciOly": "https://www.soinc.org/mission-possible-c",
     "title": "MISSION POSSIBLE",
     "details": "Participants design, build, test and document a Rube Goldberg-like device that completes a\n                            required action through an optional series of specific actions.",
-    "people": ["???!!!"]
+    "people": ["?!"]
 }, {
     "wiki": "https://scioly.org/wiki/index.php/Mousetrap_Vehicle",
     "sciOly": "https://www.soinc.org/mousetrap-vehicle-c",
@@ -111,13 +111,13 @@ const ALL_EVENTS = [{
     "sciOly": "https://www.soinc.org/sounds-music-c",
     "title": "SOUNDS OF MUSIC",
     "details": "Teams must construct and tune one device prior to the tournament based on a 12-tone equal\n                            tempered scale and complete a written test on the physics of sound.",
-    "people": ["Serena An"]
+    "people": ["Serena An", "Tristina Ting"]
 }, {
     "wiki": "https://scioly.org/wiki/index.php/Thermodynamics",
     "sciOly": "https://www.soinc.org/thermodynamics-c",
     "title": "THERMODYNAMICS",
     "details": "Teams must construct an insulated device prior to the tournament that is designed to retain\n                            heat and complete a written test on thermodynamic concepts.",
-    "people": ["Grant Sternhagen", "???"]
+    "people": ["Grant Sternhagen", "Samyok Nepal"]
 }, {
     "wiki": "https://scioly.org/wiki/index.php/Water_Quality",
     "sciOly": "https://www.soinc.org/water-quality-c",
@@ -144,3 +144,34 @@ $(document).ready(() => {
         data: {events: ALL_EVENTS}
     });
 });
+let page_numbers = [
+    {name: "Anatomy & Physiology", page_num: 2},
+    {name: "Astronomy", page_num: 3},
+    {name: "Boomilever ", page_num: 4},
+    {name: "Chemistry Lab", page_num: 7},
+    {name: "Circuit Lab", page_num: 8},
+    {name: "Codebusters", page_num: 9},
+    {name: "Designer Genes", page_num: 11},
+    {name: "Disease Detectives", page_num: 12},
+    {name: "Dynamic Planet", page_num: 13},
+    {name: "Experimental Design", page_num: 14},
+    {name: "Fermi Questions", page_num: 16},
+    {name: "Forensics", page_num: 17},
+    {name: "Fossils", page_num: 19},
+    {name: "Geologic Mapping", page_num: 22},
+    {name: "Herpetology", page_num: 23},
+    {name: "Mission Possible", page_num: 26},
+    {name: "Mousetrap Vehicle", page_num: 29},
+    {name: "Protein Modeling", page_num: 32},
+    {name: "Sounds of Music", page_num: 34},
+    {name: "Thermodynamics", page_num: 36},
+    {name: "Water Quality", page_num: 38},
+    {name: "Wright Stuff", page_num: 39},
+    {name: "Write It Do It", page_num: 41}
+];
+for(let i=0; i<ALL_EVENTS.length; i++){
+    ALL_EVENTS[i] = {
+        ...ALL_EVENTS[i],
+        ...page_numbers[i]
+    }
+}
