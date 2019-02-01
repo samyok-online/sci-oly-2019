@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Score Tracker!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
     <link rel="stylesheet" href="static/css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -18,23 +18,28 @@
             <a href="/" class="right brand-logo">Only <span id="countdown">some time</span> left!</a>
             <ul class="left">
                 <li>
+                    <a href="/">Home
+                        <i class="material-icons right">home</i>
+                    </a>
+                </li>
+                <li class="active">
                     <a href="scores.html">ScoreTracker
                         <i class="material-icons right">score</i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://docs.google.com/spreadsheets/d/112X9Mj8x-YRNsTikTXI7lveLCZc9N8n1efaurbxns88/edit#gid=338614591">
+                    <a href="events.html">
                         Events <i class="material-icons right">event_note</i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://api-static.ctlglobalsolutions.com/science/SO_C_2019.pdf">
+                    <a href="rules.html">
                         Rules Manual
                         <i class="material-icons right">gavel</i></a>
                 </li>
                 <li>
 
-                    <a href="/static/2019sdsciolydivc.pdf">Timings <i class="material-icons right">av_timer</i>
+                    <a href="timings.html">Timings <i class="material-icons right">av_timer</i>
                     </a>
                 </li>
             </ul>
@@ -93,7 +98,7 @@
         </div>
     </div>
 </footer>
-
+<script src="static/js/events.js"></script>
 <script src="static/js/main.js"></script>
 </body>
 </html>

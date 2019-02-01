@@ -1,0 +1,16 @@
+Index: scores.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- scores.html	(revision 9b64b58bb1152a4b0431e5d60f1977b1f28119b1)
++++ scores.html	(date 1548387144265)
+@@ -18,7 +18,7 @@
+     <div v-bind:class="[{flex: true},{win: (event.brookingsScore < event.yanktonScore)}, { lose: (event.brookingsScore > event.yanktonScore)}, {nottry: (event.brookingsScore == 5)}]"
+          v-for="event, key in events">
+         <label>
+-            <input readonly type="text" v-bind:value="event.yanktonScore">
++            <input disabled readonly type="text" v-bind:value="event.yanktonScore">
+         </label>
+         <label>
+             <input type="text"
