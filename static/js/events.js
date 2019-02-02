@@ -145,18 +145,20 @@ $(document).ready(() => {
         methods: {
             searchByNameOnChip: function (element) {
                 if ($(element.target).text().trim() === $("#searchBar").val()) {
-                    $("#searchBar").val('').click().focus().keyup().blur();
+                    $("#searchBar").val('').keyup();
                 } else {
-                    $("#searchBar").val($(element.target).text().trim()).focus().keyup().blur();
+                    $("#searchBar").val($(element.target).text().trim()).keyup();
                 }
+                $("label[for='searchBar']").addClass("active");
             },
             searchByEventNameOnCard: function (element) {
                 if ($(element.target).hasClass("card-title")) {
                     if ($(element.target).text().trim().toLowerCase() === $("#searchBar").val()) {
-                        $("#searchBar").val('').click().focus().keyup().blur();
+                        $("#searchBar").val('').keyup();
                     } else {
-                        $("#searchBar").val($(element.target).text().trim().toLowerCase()).focus().keyup().blur();
+                        $("#searchBar").val($(element.target).text().trim().toLowerCase()).keyup();
                     }
+                    $("label[for='searchBar']").addClass("active");
                 }
             }
         }

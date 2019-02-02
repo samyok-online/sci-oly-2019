@@ -15,7 +15,7 @@ $(document).ready(function () {
         });
         $(".chip").filter(function () {
             if(value)
-                $(this).toggleClass("blue-grey lighten-2", $(this).text().toLowerCase().indexOf(value) > -1)
+                $(this).toggleClass("blue-grey lighten-2", $(this).text().toLowerCase().indexOf(value) > -1);
             else
                 $(this).removeClass("blue-grey lighten-2")
         });
