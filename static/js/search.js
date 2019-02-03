@@ -1,4 +1,3 @@
 /*global $*/
 $(document).ready(function () {
-
 });
