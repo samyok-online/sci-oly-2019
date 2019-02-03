@@ -10,6 +10,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA9RdBQQAwztVeRkhg7can2W1CzUSj5qZM",
+            authDomain: "brookings-sci-oly.firebaseapp.com",
+            databaseURL: "https://brookings-sci-oly.firebaseio.com",
+            projectId: "brookings-sci-oly",
+            storageBucket: "brookings-sci-oly.appspot.com",
+            messagingSenderId: "1072038859317"
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
 <body>
 <div class="navbar-fixed">
