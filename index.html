@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:v-on="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science Olympiad</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
@@ -9,120 +10,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="favicon.ico" rel="icon" type="image/x-icon"/>
-    <style>
-        .no-uppercase {
-            text-transform: none;
-        }
-
-        .card-title {
-            cursor: pointer;
-        }
-    </style>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyA9RdBQQAwztVeRkhg7can2W1CzUSj5qZM",
-            authDomain: "brookings-sci-oly.firebaseapp.com",
-            databaseURL: "https://brookings-sci-oly.firebaseio.com",
-            projectId: "brookings-sci-oly",
-            storageBucket: "brookings-sci-oly.appspot.com",
-            messagingSenderId: "1072038859317"
-        };
-        firebase.initializeApp(config);
-    </script>
 </head>
 <body>
-<!--nav bar-->
-<div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper nav-">
-            <a href="/" class="right brand-logo">Only <span id="countdown">some time</span> left!</a>
-            <ul class="left">
-                <li class="active">
-                    <a href="/">Home
-                        <i class="material-icons right">home</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="scores.html">ScoreTracker
-                        <i class="material-icons right">score</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="events.html">
-                        Events <i class="material-icons right">event_note</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="rules.html">
-                        Rules Manual
-                        <i class="material-icons right">gavel</i></a>
-                </li>
-                <li>
-                    <a href="timings.html">Timings <i class="material-icons right">av_timer</i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
-<div id="root">
-    <div class="container" style="display: flex;
-        align-items: center;
-        height: 50vh;
-        justify-content: center;">
-        <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-
-            <div class="spinner-layer spinner-red">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-
-            <div class="spinner-layer spinner-yellow">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-
-            <div class="spinner-layer spinner-green">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container center" id="menu">
+    <h2>Brookings Science Olympiad</h2>
+    <div style="height: 10vh; display: flex; justify-content: center; align-items: center;"><a
+            href="https://docs.google.com/viewer?a=v&pid=sites&srcid=dXNkLmVkdXxzZHNjaWVuY2VvbHltcGlhZHxneDoyZDE0MmJkNmJmMTQ1NThl"
+            class="btn blue-grey darken-2 waves-effect waves"
+            target="_blank">Schedule<i class="material-icons right">open_in_new</i></a></div>
+    <div style="height: 10vh; display: flex; justify-content: center; align-items: center;"><a
+            href="https://www.usd.edu/-/media/files/about-usd/campusmapweb.ashx"
+            class="btn blue-grey darken-2 waves-effect waves"
+            target="_blank">Map<i class="material-icons right">open_in_new</i></a></div>
+    <div style="height: 10vh; display: flex; justify-content: center; align-items: center;"><a
+            href="https://www.scienceolympiad.club"
+            class="btn blue-grey darken-2 waves-effect waves"
+            target="_blank">Division C<i class="material-icons right">open_in_new</i></a></div>
 </div>
 <div style="height: 10vh"></div>
 <footer class="page-footer">
@@ -130,8 +33,7 @@
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">Brookings Science Olympiad</h5>
-                <p class="grey-text text-lighten-4">Created for use by the 2019 Brookings High School Science Olympiad
-                    team. Go Cats!</p>
+                <p class="grey-text text-lighten-4">Created for use by the 2019 Brookings High School Science Olympiad team. Go Cats!</p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
@@ -155,7 +57,7 @@
 </footer>
 <script src="static/js/events.js"></script>
 <script src="static/js/main.js"></script>
-<script src="static/js/locked.js"></script>
-<script src="static/js/index.js"></script>
+<script src="static/js/search.js"></script>
+
 </body>
 </html>
