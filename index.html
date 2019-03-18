@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science Olympiad</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
@@ -11,82 +12,20 @@
     <link href="favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body>
-<!--nav bar-->
-<div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper nav-">
-            <a href="/" class="right brand-logo">Only <span id="countdown">some time</span> left!</a>
-            <ul class="left">
-                <li class="active">
-                    <a href="/">Home
-                        <i class="material-icons right">home</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="scores.html">ScoreTracker
-                        <i class="material-icons right">score</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="events.html">
-                        Events <i class="material-icons right">event_note</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="rules.html">
-                        Rules Manual
-                        <i class="material-icons right">gavel</i></a>
-                </li>
-                <li>
-                    <a href="timings.html">Timings <i class="material-icons right">av_timer</i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
-
 <div class="container center" id="menu">
     <h2>Brookings Science Olympiad</h2>
-    <div class="input-field">
-        <i class="material-icons prefix">search</i>
-        <input id="searchBar" type="text" class="validate">
-        <label for="searchBar">Event Search</label>
-    </div>
-    <div class="row">
-        <div class="col s0 l2"></div>
-        <div class="col s12 l8" id="search" style="display: flex">
-            <table class="centered">
-                <tbody>
-                <tr v-for="event in events">
-                    <td>
-                        <div v-for="person in event.people" class="chip">
-                            <img src="http://cdn.onlinewebfonts.com/svg/img_405324.png" alt="Person">
-                            {{person}}
-                        </div>
-                        <div class="card blue-grey darken-1">
-                            <div class="card-content white-text">
-                                <span class="card-title">
-                                    {{event.title}}
-                                </span>
-                                <p>
-                                    {{event.details}}
-                                </p>
-                            </div>
-                            <div class="card-action">
-                                <a v-bind:href="event.wiki"
-                                   class="btn waves-effect waves-light blue-grey darken-4">Wiki</a>
-                                <a v-bind:href="event.sciOly" class="btn waves-effect waves-light blue-grey darken-2">SciOly</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-    </div>
-
+    <div style="height: 10vh; display: flex; justify-content: center; align-items: center;"><a
+            href="https://docs.google.com/viewer?a=v&pid=sites&srcid=dXNkLmVkdXxzZHNjaWVuY2VvbHltcGlhZHxneDoyZDE0MmJkNmJmMTQ1NThl"
+            class="btn blue-grey darken-2 waves-effect waves"
+            target="_blank">Schedule<i class="material-icons right">open_in_new</i></a></div>
+    <div style="height: 10vh; display: flex; justify-content: center; align-items: center;"><a
+            href="https://www.usd.edu/-/media/files/about-usd/campusmapweb.ashx"
+            class="btn blue-grey darken-2 waves-effect waves"
+            target="_blank">Map<i class="material-icons right">open_in_new</i></a></div>
+    <div style="height: 10vh; display: flex; justify-content: center; align-items: center;"><a
+            href="https://www.scienceolympiad.club"
+            class="btn blue-grey darken-2 waves-effect waves"
+            target="_blank">Division C<i class="material-icons right">open_in_new</i></a></div>
 </div>
 <div style="height: 10vh"></div>
 <footer class="page-footer">
